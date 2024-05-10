@@ -1,0 +1,3 @@
+def notng():
+    print("hello")
+    
