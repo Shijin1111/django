@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/css/first.css" >
+    <link rel="stylesheet" href="{% static 'css/first.css' %}" >
 </head>
 <body>
-    <h1>hello this is index.html</h1>
-    <img src="{%static "images/justimage.jpg"%}" alt="oh oh didn't show">
+    <h1>hello welcome to Django level two</h1>
+    <h2>here are your accessrecords</h2>
+    <div class="djangotwo">
+        {% if accessrecords %}
+        <table>
+            <tr>
+                <th>site name</th>
+                <th>date accessed</th>
+            </tr>
+            {% for acc in accessrecords %}
+            <tr>
+                <td>{{ acc.name }}</td>
+                <td>{{ acc.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>NO ACCESS RECORDS FOUND!</p>
+        {% endif %}
+    </div>
 </body>
 </html>
