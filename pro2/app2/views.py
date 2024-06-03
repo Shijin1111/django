@@ -1,5 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from app2 import forms
 # Create your views here.
+
 def index(request):
-    return HttpResponse("<em>second project</em>")
+    return render(request,'app2/index.html')
+
+def form_name_view(request):
+    form = forms.Form1()
+    return render(request,'app2/formpage.html',{'form':form})
