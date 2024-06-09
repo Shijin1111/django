@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     path('app1/',include('app1.urls')),
+    path('logout',views.userlogout,name="logout")
     
 ]
