@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate,login,logout
 def index(request):
     return render(request,'app1/index.html')
 
+@login_required
 def userlogout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
