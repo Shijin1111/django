@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <p>Do you really want to delete {{object}}?</p>
+        {% comment %} this 'object' comes with the delete query.it is calling the one which to be deleted. {% endcomment %}
+        <input type="submit" class="btn btn-danger" value="delete">
+    </form>
+{% endblock content %}
+
