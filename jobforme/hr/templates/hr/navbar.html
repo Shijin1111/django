@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Poster Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+<style>
+    .sidebar {
+  background-color: #34495e;
+  color: white;
+  width: 220px;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+</style>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+          {% comment %} <li><a href="{% url 'hrdash' %}"><i class="fas fa-user"></i> Profile</a></li>  {% endcomment %}
+          <li><a href="{% url 'postjob' %}"><i class="fas fa-plus-circle"></i> New Job Post</a></li>
+        </ul>
+        <button class="logout-button"><a href="{% url 'logout' %}">Logout</a></button>
+      </nav>
+</body>
+</html>
