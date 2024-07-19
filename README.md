@@ -1,6 +1,6 @@
 # django
 # next heading
-`import java.io.File;
+```import java.io.File;
 public class DirectoryLister
 {
     public static void main(String args[])
@@ -20,4 +20,5 @@ public class DirectoryLister
         {
             System.out.print("directory not exist");
         }
-    }`
+    }
+```
