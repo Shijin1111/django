@@ -1,3 +1,4 @@
+#Queryset
 In Django, a `QuerySet` is a collection of database queries that can be used to retrieve, filter, and manipulate data from your models. It provides a high-level way to interact with the database and supports a wide range of operations. Here’s a brief overview of how to work with `QuerySet`s:
 
 ### Basic Operations
