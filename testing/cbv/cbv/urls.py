@@ -1,8 +1,7 @@
-"""
-URL configuration for level1 project.
+"""cbv URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,7 +18,6 @@ from django.urls import path,include
 from app1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.base,name="base"),
+    path('',views.indexView.as_view(),name="index"),
     path('app1/',include('app1.urls')),
-    path('logout/',views.user_logout,name="logout"),
 ]

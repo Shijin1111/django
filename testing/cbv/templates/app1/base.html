@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="{% url "app1:list" %}">Schools</a></li>
+            <li><a class="navbar-link" href="{% url "admin:index" %}">Admin</a></li>
+            {% comment %} <li><a class="navbar-link" href="{% url "app1:list" %}">Schools</a></li> {% endcomment %}
+        </ul>
+    </nav>
+    <div class="container">
+        {% block body_block %}
+    
+        {% endblock body_block %}
+    </div>
+    
+</body>
+</html>

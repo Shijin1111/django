@@ -1,0 +1,22 @@
+{% extends "app1/base.html" %}
+{% block body_block %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+    {% if Registered %}
+        <h1>Thank you for registering.</h1>
+    {% else %}
+        <form method="POST" enctype="multipart/form-data" class="border p-4 rounded shadow text-center">
+            <h1 class="text-center">Registration</h1>
+            {% csrf_token %}
+            <div class="flexjustify-content-center align-items-center min-vh-100">
+                {{teacherform.as_p}}
+                {{portfolioform.as_p}}
+                <input type="submit" value="Register">
+            </div>
+            
+        </form>
+    {% endif %}
+</div>
+{% endblock body_block %}
+
+
+
