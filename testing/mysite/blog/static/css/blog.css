@@ -58,3 +58,13 @@ canvas {
     font-family: "Patua One", serif;
     font-size: 18px; /* Adjust as needed */
 }
+
+.glyphicone-color {
+    color: rgb(255, 255, 255);
+}
+
+.centerstage {
+    margin-left: auto;
+    margin-right: auto;
+}
+

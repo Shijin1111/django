@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ problem.title }}</h2>
+<p><strong>Difficulty:</strong> {{ problem.difficulty }}</p>
+<p><strong>Description:</strong> {{ problem.description }}</p>
+
+<h4>Example</h4>
+<p><strong>Input:</strong> {{ problem.example_input }}</p>
+<p><strong>Output:</strong> {{ problem.example_output }}</p>
+
+{% if user.is_authenticated %}
+    <h4>Submit Your Code</h4>
+    <form method="post" action="{% url 'submit_code' problem.id %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="code">Code</label>
+            <textarea name="code" class="form-control" rows="10" placeholder="Write your code here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% else %}
+    <p>Please <a href="{% url 'account_login' %}">login</a> to submit your solution.</p>
+{% endif %}
+{% endblock %}

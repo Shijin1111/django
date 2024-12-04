@@ -1,11 +1,26 @@
-create project
-create app and list it in settings
-create templates -> appname -> something.html and add it in settings(both path and in TEMPLATES dictionary)
-create models
-goto view import models from app and add functions
-create app urls and in that, import views from app and path from django.urls also add urlpatterns 
-goto project urls and import views and include and also add paths
-now try to migrate the code
-goto admin and register your models
-check it in admin weather it is showing
-populate the database
+ListNode* dummy = new ListNode();
+        ListNode* current = dummy;
+        int carry = 0;
+        while(l1!=nullptr || l2!=nullptr)
+        {
+            int sum = carry;
+            if(l1!=nullptr)
+            {
+                sum = sum+l1->val;
+                l1 = l1->next;
+            }
+            if(l2!=nullptr)
+            {
+                sum = sum+l2->val;
+                l2 = l2->next;
+            }
+            int digit = sum%10;
+            carry = sum/10;
+            current->next = new ListNode(digit);
+            current = current->next;
+            if (carry > 0) {
+            current->next = new ListNode(carry);
+            }
+        }
+        // Return the result list (skipping the dummy node)
+        return dummy->next;
